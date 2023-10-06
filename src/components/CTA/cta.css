@@ -1,0 +1,21 @@
+.cta-main{
+    background-color: bisque;
+    width: 95vw;
+    height: 50vh;
+    margin-top: 20px;;
+    margin-left: 35px;
+    border-radius: 50px;
+    display: flex;
+
+}
+.cta-label{
+    font-size: 40px;
+}
+.cta-image{
+    padding-left: 10rem; 
+    padding-bottom: 20px;;
+}
+.cta-text{
+    padding-top: 80px;
+    padding-left: 80px;
+}

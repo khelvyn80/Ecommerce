@@ -1,0 +1,16 @@
+.cart-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 1rem;
+    border-bottom: 2px solid gray;
+}
+.cart-container-title{
+    display: flex;
+    justify-content: space-between;
+    /* gap: 20px; */
+    padding: 1rem;
+}
+.cart-table{
+    width: 100%;
+}
