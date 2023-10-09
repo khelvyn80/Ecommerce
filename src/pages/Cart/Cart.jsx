@@ -13,9 +13,6 @@ function Cart() {
   return (
     <div>
       <Navbar />
-      <button style={{justifyContent:"center",alignItems:"center",width:"100%"}} onClick={() => clearCart() }>
-        Clear All Cart
-      </button>
       <table className="cart-table">
         <tr>
           <th className="cart-container-title">
@@ -64,13 +61,18 @@ function Cart() {
               </div>
               <div>
                 {cart.map((p) =>
-                  p.id === product.id ? p.qty * product.price : 1
+                  p.id === product.id ? p.qty * product.price : ""
                 )}
               </div>
             </div>
           ))}
         </tr>
       </table>
+      <br />
+      <br />
+      <button style={{justifyContent:"center",alignItems:"center",width:"20%", padding:"10px"}} onClick={() => clearCart() }>
+        Clear All Cart
+      </button>
     </div>
   );
 }

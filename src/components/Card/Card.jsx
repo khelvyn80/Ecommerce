@@ -1,12 +1,18 @@
 import React, { useContext, useEffect, useState } from "react";
-import "./card.css";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import { Context } from "../../utils/context";
 import { AiOutlineDelete } from "react-icons/ai";
+import "./card.css";
 
 function Card() {
-  const { cart, AddtoCart, RemovefromCart, increaseQty, decreaseQty } =
-    useContext(Context);
+  const {
+    cart,
+    AddtoCart,
+    RemovefromCart,
+    increaseQty,
+    decreaseQty,
+  } = useContext(Context);
   console.log(cart);
   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -25,11 +31,13 @@ function Card() {
       {products.map((product) => (
         <div className="card-main">
           <div className="image-container">
-            <img
-              className="card-image"
-              src={product.image}
-              alt={product.title}
-            />
+            <Link to={`/product/${product.id}`}>
+              <img
+                className="card-image"
+                src={product.image}
+                alt={product.title}
+              />
+            </Link>
           </div>
           <div>
             <p>{product.title}</p>
@@ -58,6 +66,7 @@ function Card() {
               <button onClick={() => AddtoCart(product)}>Add to Cart</button>
             )}
           </div>
+          <div></div>
         </div>
       ))}
     </div>
