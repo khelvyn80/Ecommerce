@@ -6,15 +6,20 @@ ul {
     background-color: #333;
   }
   
-  li {
-    float: left;
-  }
+  /* li {
+    float: left; */
+  /* } */
   
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 1rem;
+  }
+
   li a {
-    display: block;
     color: white;
     text-align: center;
-    padding: 14px 5rem;
     text-decoration: none;
   }
 

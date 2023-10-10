@@ -32,7 +32,7 @@ function Product() {
 
       <div className="product-details">
         <p>Name: {product.title}</p>
-        <p>Description:{product.description}</p>
+        <p>Description: {product.description}</p>
         <p>Price: Ghc {product.price}</p>
         <div className="btn">
           {cart.find((cartproduct) => cartproduct.id === product.id) ? (
