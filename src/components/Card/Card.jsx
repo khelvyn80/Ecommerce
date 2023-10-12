@@ -40,7 +40,10 @@ function Card() {
             </Link>
           </div>
           <div>
-            <p>{product.title}</p>
+            <p>{product.title.length > 20
+                ? product.title.substring(0, 20) + "...."
+                : product.title}
+            </p>
             <p>Ghc {product.price}</p>
             <p>{product.category}</p>
             <p>
